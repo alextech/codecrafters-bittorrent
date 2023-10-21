@@ -1,4 +1,5 @@
 using System.Text.Json;
+using codecrafters_bittorrent;
 
 // Parse arguments
 var (command, param) = args.Length switch
@@ -15,26 +16,10 @@ if (command == "decode")
     Console.WriteLine("Logs from your program will appear here!");
 
     // Uncomment this line to pass the first stage
-    var encodedValue = param;
-    //if (Char.IsDigit(encodedValue[0]))
-    //{
-    //    // Example: "5:hello" -> "hello"
-    //    var colonIndex = encodedValue.IndexOf(':');
-    //    if (colonIndex != -1)
-    //    {
-    //        var strLength = int.Parse(encodedValue[..colonIndex]);
-    //        var strValue = encodedValue.Substring(colonIndex + 1, strLength);
-    //        Console.WriteLine(JsonSerializer.Serialize(strValue));
-    //    }
-    //    else
-    //    {
-    //        throw new InvalidOperationException("Invalid encoded value: " + encodedValue);
-    //    }
-    //}
-    //else
-    //{
-    //    throw new InvalidOperationException("Unhandled encoded value: " + encodedValue);
-    //}
+    string encodedValue = param;
+    BencoderParser bencoderParser = new BencoderParser(encodedValue);
+    string decodedValue = bencoderParser.Parse();
+    Console.WriteLine(JsonSerializer.Serialize(decodedValue));
 }
 else
 {

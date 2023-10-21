@@ -8,7 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
       <PackageReference Include="NUnit" Version="3.13.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\codecrafters-bittorrent\codecrafters-bittorrent.csproj" />
+    </ItemGroup>
 </Project>
