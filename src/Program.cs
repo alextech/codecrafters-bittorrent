@@ -15,7 +15,7 @@ if (command == "decode")
     Console.WriteLine("Logs from your program will appear here!");
 
     // Uncomment this line to pass the first stage
-    //var encodedValue = param;
+    var encodedValue = param;
     //if (Char.IsDigit(encodedValue[0]))
     //{
     //    // Example: "5:hello" -> "hello"
