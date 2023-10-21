@@ -12,9 +12,6 @@ var (command, param) = args.Length switch
 // Parse command and act accordingly
 if (command == "decode")
 {
-    // You can use print statements as follows for debugging, they'll be visible when running tests.
-    Console.WriteLine("Logs from your program will appear here!");
-
     // Uncomment this line to pass the first stage
     string encodedValue = param;
     BencoderParser bencoderParser = new BencoderParser(encodedValue);
