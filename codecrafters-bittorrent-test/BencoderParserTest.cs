@@ -1,4 +1,5 @@
-﻿using codecrafters_bittorrent;
+﻿#if LOCAL_TEST
+using codecrafters_bittorrent;
 using NUnit.Framework;
 
 namespace codecrafters_bittorent_test;
@@ -16,3 +17,4 @@ public class BencoderParserTest
         Assert.AreEqual(output, "hello");
     }
 }
+#endif
